@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { BlockformComponent } from '../app/blockform/blockform.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  
 })
 export class AppComponent {
-  title = 'weekoneangular';
+  title = 'Week One Angular Project';
+  
 }

@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blockform.component.css']
 })
 export class BlockformComponent implements OnInit {
-
+  
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+
