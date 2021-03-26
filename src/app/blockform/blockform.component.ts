@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlockformComponent implements OnInit {
   
+  quotedetails = 'quoteinfo';
+
+  quoteinfo = {
+    name : "Alex",
+    age: "new",
+  };
+
+
   
   constructor() { }
 
