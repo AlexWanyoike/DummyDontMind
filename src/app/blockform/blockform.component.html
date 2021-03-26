@@ -47,7 +47,18 @@
   </ul>
 </div>
 
+<!---->
+<div>
+  <p>{{numberofLikes}}</p>
+  <button (click)= "likeButtonClick()" type="button" class="btn btn-success btn-sm">Like</button>
+  <button  (click)= "dislikeButtonClick()" type="button" class="btn btn-danger btn-sm">Dislike</button> 
+</div>
+  
 
+<!---->
+ <div>
+   {{myDate | date: 'full'}}
+ </div>
 <!---->
 <div class="container">
   <form  (ngSubmit)="submit()">
