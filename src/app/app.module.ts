@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BlockformComponent } from './blockform/blockform.component';
 
- 
-
+//
+ import { FormsModule }from '@angular/forms';
+//
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { BlockformComponent } from './blockform/blockform.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
