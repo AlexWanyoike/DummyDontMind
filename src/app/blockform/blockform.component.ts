@@ -17,7 +17,9 @@ export class BlockformComponent implements OnInit {
 //
   
  myimage:string ="assets/images/Thank your For Choosing Us!!.png";
- myimage1:string ="src/assets/images/Thank your For Choosing Us!! (1).png";
+ myimage1:string ="assets/images/Thank your For Choosing Us!! (1).png";
+ myimage2:string ="assets/images/Thank your For Choosing Us!! (2).png";
+ myimage3:string ="assets/images/Pink and Blue Galaxy Gaming YouTube Channel Art.png";
 
 //
 private _today = Date();
