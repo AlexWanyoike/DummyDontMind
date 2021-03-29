@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit,  EventEmitter} from '@angular/core';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-blockform',
@@ -10,11 +11,10 @@ export class BlockformComponent implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
+
   
   
-  submit(){
-    console.log("Form submitted",)
-  }
+ 
 
 
 //
@@ -41,17 +41,37 @@ myDate() {
   
  
 //
-  numberofLikes: number =0;
-  
+numberofLikes: number =0;
+numberofDislikes: number =0;
 
-  likeButtonClick(){
-    this.numberofLikes++;
-  };
-  dislikeButtonClick(){
-    this.numberofLikes--;
+likeButtonClick(){
+  this.numberofLikes++;
+};
+dislikeButtonClick(){
+  this.numberofDislikes++;
+}
+
+
+//
+UserName:string = "Enter UserName"
+
+//
+ 
+  UserName:string = "Enter UserName"
+
+  userlist = []
+
+  onclick(myuser:string){
+    if(myuser.length > 0)
+    {
+      this.userlist.push();
+      myuser= '';
+    }
+    
   }
 
 
+  
 
-
+  
 }

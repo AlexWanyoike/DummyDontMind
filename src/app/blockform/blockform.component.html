@@ -1,3 +1,11 @@
+<div class="container">
+  <img src="src/assets/Thank your For Choosing Us!!.png" alt="Assets">
+  <h2><Label>large </Label></h2>
+</div>
+<!---->
+
+<!---->
+<!---->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +43,7 @@
 <div class="container">
   <ul>
     <li *ngFor = "let sample of samples">
-      <div>
+      
         <span>{{sample.quote}}</span>
         <pre></pre>
         <span>{{sample.author}}</span>
@@ -44,7 +52,10 @@
         <pre></pre>
         <span>{{sample.date}}</span>
         <pre></pre>
-      </div>
+        <p>{{numberofLikes}}</p>
+        <button (click)= "likeButtonClick()" type="button" class="btn btn-success btn-sm">Like</button>
+        <p>{{numberofDislikes}}</p>
+        <button  (click)= "dislikeButtonClick()" type="button" class="btn btn-danger btn-sm">Dislike</button> 
     </li>
   </ul>
 </div>
@@ -53,6 +64,7 @@
 <div>
   <p>{{numberofLikes}}</p>
   <button (click)= "likeButtonClick()" type="button" class="btn btn-success btn-sm">Like</button>
+  <p>{{numberofDislikes}}</p>
   <button  (click)= "dislikeButtonClick()" type="button" class="btn btn-danger btn-sm">Dislike</button> 
 </div>
   
@@ -62,21 +74,32 @@
   {{today | date:'short'}}
  </div>
 <!---->
+
+
+
 <div class="container">
-  <form  (ngSubmit)="submit()">
+  <form  >
     <label for="">Form</label>
     <div class="form-group">
+
         <label for="">Your Name:</label>
-        <input ntype="text" placeholder="Name Here"  >
+        <input  name="name"  >
         <br><br>
+
         <label for="">Quote:</label>
         <input type="text" placeholder="Quote" >
         <br><br>
+
         <label for="">Authors Name:</label>
         <input type="text" placeholder="Authors Name">
         <br><br>
+
         <button  class="btn btn-primary" type="submit">Submit</button>           
-    </div>    
+    </div>  
+
 </form>
 </div>
 
+
+<!---->
+ 
