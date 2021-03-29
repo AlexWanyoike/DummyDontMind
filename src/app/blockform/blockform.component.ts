@@ -70,9 +70,11 @@ UserName:string = "Enter UserName"
   @Output() add = new EventEmitter<Dataform>();
   
   onCreate(sample:any){
-    this.add.emit(this.quote);
-    this.quote = new Dataform("","","");
     this.samples.push(sample);
+    
+    this.quote = new Dataform("","","");
+    this.add.emit(this.quote);
+    
   }
 
 
