@@ -98,6 +98,10 @@ UserName:string = "Enter UserName"
     this.add.emit(this.quote);
     
   }
+  onDelete(sample:any){
+    this.samples.splice(sample);
+
+  }
 
 
   addQuote(sample:any){

@@ -49,7 +49,10 @@
           <span> Rating: {{numberofLikes}}</span>
           <button (click)= "likeButtonClick()" type="button" class="btn btn-success btn-sm">Like</button>
           <span>{{numberofDislikes}}</span>
-          <button  (click)= "dislikeButtonClick()" type="button" class="btn btn-danger btn-sm">Dislike</button> 
+          <button  (click)= "dislikeButtonClick()" type="button" class="btn btn-warning btn-sm">Dislike</button> 
+          <span></span>
+          <button (click)="onDelete($event)" class="btn btn-danger btn-sm" >Delete</button>
+          
       </li>
     </ul>
 
@@ -66,20 +69,16 @@
 
   <div class="col-4">
     <div class=" form-control container center">
-    <form (ngSubmit)="onCreate($event) "   class="form1" id="form1">
+    <form (ngSubmit)="onCreate($event)"   class="form1" id="form1">
       <label for="" class="form2">Quote Creator</label>
       <div class="">
 
           <label for="">Your Name:</label>
-          <input type="text" #name='ngModel' required minlength="3" class="form-control" id="name" [(ngModel)]="quote.name" name="name"  >
+          <input type="text" #name='ngModel' required minlength="3" class="form-text" id="name" [(ngModel)]="quote.name" name="name" placeholder="Your Name " >
           <br><br>
 
-          <p>{{quote.name}}</p>
-          <p>{{quote.head}}</p>
-          <p>{{quote.flower}}</p>
-  
           <label for="">Quote:</label>
-          <input type="text" placeholder="quote" class="form-text" quote="head" #head='ngModel' [(ngModel)]="quote.head" name='head'>
+          <input type="text" placeholder="Quote" class="form-text" quote="head" #head='ngModel' [(ngModel)]="quote.head" name='head'>
           <br><br>
   
           <label for="">Authors Name:</label>
