@@ -1,5 +1,5 @@
 img{
-    height: 300%;
+    height: 100%;
     width: 100%;
 }
 
@@ -23,7 +23,7 @@ h2{
     margin: 0 5px;
 }
 #leftside{
-    margin-left: 800px ;
+    margin-left: 600px ;
 }
 .form-control{
     position: left;
@@ -92,23 +92,30 @@ body{
 
 .container{
     height: auto;
-    margin: 0 auto;
+    margin-right: 0 px;
     display: grid;
     grid-template-columns: repeat(auto-fit,minimax(280px,1fr));
     grid-gap: 10px;
-    padding: 1px;
+    padding: 0.5px;
     box-sizing: border-box;
+    border: 10px;
 }   
 .container .box{
     position: relative;
     background-color: #fff;
-    padding: 2px;
+    padding: 1px;
     text-align: center;
     overflow: hidden;
     border-radius: 20px;
+    padding-bottom: 0.5rem;
 }
 p{
-    font-size: 18px;
+    font-size: 15px;
     font: bold;
-    font-weight: bold;
 }
+span{
+    font-size: 15px;
+    font-style: italic;
+
+}
+
