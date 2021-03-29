@@ -15,7 +15,7 @@ h2{
     font-size: 28px;
 }
 .navbar-dark .navbar-nav .nav-link{
-    font-weight: 700;
+    font-weight: 400;
     font-size: 14px;
     text-transform: uppercase;
 }
@@ -89,12 +89,26 @@ body{
     background-color: #222;
     font-family: sans-serif;
  }
-span{
-    color: white;
-} 
+
 .container{
     height: auto;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minimax(280px));
+    grid-template-columns: repeat(auto-fit,minimax(280px,1fr));
+    grid-gap: 10px;
+    padding: 1px;
+    box-sizing: border-box;
 }   
+.container .box{
+    position: relative;
+    background-color: #fff;
+    padding: 2px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+p{
+    font-size: 18px;
+    font: bold;
+    font-weight: bold;
+}

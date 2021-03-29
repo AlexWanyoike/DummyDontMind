@@ -1,12 +1,8 @@
-<div class="container">
-  
-  <h2>Quote It Out!!!</h2>
-</div>
-<!---->
+
 
 <!---->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Quote</a>
+    <a class="navbar-brand" href="#"> Quote It Out!!</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -39,29 +35,30 @@
 <div class="container">
 <div class="row">
   <div class="col-8">
-  <div class="box">
-    <ul>
-      <li *ngFor = "let sample of samples">
+  <div >
+    <ul >
+      <li class="box" *ngFor = "let sample of samples">
         
-          <span>{{sample.quote}}</span>
+          <span>Quote: {{sample.quote}}</span>
           <pre></pre>
-          <span>{{sample.author}}</span>
+          <span> Quote Author: {{sample.author}}</span>
+          
+          <span> Your Name: {{sample.name}}</span>
           <pre></pre>
-          <span>{{sample.name}}</span>
+          <span> Date:  {{sample.date}}</span>
           <pre></pre>
-          <span>{{sample.date}}</span>
-          <pre></pre>
-          <p>{{numberofLikes}}</p>
+          <span> Rating: {{numberofLikes}}</span>
           <button (click)= "likeButtonClick()" type="button" class="btn btn-success btn-sm">Like</button>
-          <p>{{numberofDislikes}}</p>
+          <span>{{numberofDislikes}}</span>
           <button  (click)= "dislikeButtonClick()" type="button" class="btn btn-danger btn-sm">Dislike</button> 
       </li>
     </ul>
 
     <div>
-      <p>{{numberofLikes}}</p>
+      <span>{{numberofLikes}}</span>
       <button (click)= "likeButtonClick()" type="button" class="btn btn-success btn-sm">Like</button>
-      <p>{{numberofDislikes}}</p>
+      
+      <span>{{numberofDislikes}}</span>
       <button  (click)= "dislikeButtonClick()" type="button" class="btn btn-danger btn-sm">Dislike</button> 
     </div>
 
@@ -76,20 +73,24 @@
 
   <div class="col-4">
     <div class=" form-control container center">
-    <form  class="form1" id="form1">
+    <form (ngSubmit)="onCreate($event) "   class="form1" id="form1">
       <label for="" class="form2">Quote Creator</label>
       <div class="">
 
           <label for="">Your Name:</label>
-          <input  name="name" class="form-text">
+          <input type="text" #name='ngModel' required minlength="3" class="form-control" id="name" [(ngModel)]="quote.name" name="name"  >
           <br><br>
+
+          <p>{{quote.name}}</p>
+          <p>{{quote.head}}</p>
+          <p>{{quote.flower}}</p>
   
           <label for="">Quote:</label>
-          <input type="text" placeholder="Quote" class="form-text">
+          <input type="text" placeholder="quote" class="form-text" quote="head" #head='ngModel' [(ngModel)]="quote.head" name='head'>
           <br><br>
   
           <label for="">Authors Name:</label>
-          <input type="text" placeholder="Authors Name" class="form-text">
+          <input type="text" placeholder="Authors Name" class="form-text" author="flower" #flower='ngModel' [(ngModel)]="quote.flower" name="flower">
           <br><br>
   
           <button  class="btn btn-primary" type="submit">Submit</button>           

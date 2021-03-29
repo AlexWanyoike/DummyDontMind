@@ -1,5 +1,8 @@
-import { Component, Input, OnInit,  EventEmitter} from '@angular/core';
+import { Dataform } from './../dataform';
+import { Component, Input, OnInit,  EventEmitter,Output} from '@angular/core';
 import { NgModule } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-blockform',
@@ -10,10 +13,8 @@ import { NgModule } from '@angular/core';
   
 })
 export class BlockformComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  ngOnInit() {
   }
-
 //
   
  myimage:string ="assets/images/Thank your For Choosing Us!!.png";
@@ -43,8 +44,6 @@ myDate() {
  // 
  
   
- 
-//
 numberofLikes: number =0;
 numberofDislikes: number =0;
 
@@ -63,19 +62,24 @@ UserName:string = "Enter UserName"
  
   UserName:string = "Enter UserName"
 
-  userlist = []
+  quotelist = []
 
-  onclick(myuser:string){
-    if(myuser.length > 0)
-    {
-      this.userlist.push();
-      myuser= '';
-    }
-    
+
+  quote = new Dataform("","","");
+  
+  @Output() add = new EventEmitter<Dataform>();
+  
+  onCreate(sample:any){
+    this.add.emit(this.quote);
+    this.quote = new Dataform("","","");
+    this.samples.push(sample);
   }
 
 
-  
+  addQuote(sample:any){
+    this.samples.push(sample)
+    console.log('name')
+  }
 
-  
+
 }
