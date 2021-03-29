@@ -6,16 +6,18 @@ import { NgModule } from '@angular/core';
   templateUrl: './blockform.component.html',
   styleUrls: ['./blockform.component.css'],
   
+  
+  
 })
 export class BlockformComponent implements OnInit {
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
 
+//
   
-  
- 
-
+ myimage:string ="assets/images/Thank your For Choosing Us!!.png";
+ myimage1:string ="src/assets/images/Thank your For Choosing Us!! (1).png";
 
 //
 private _today = Date();
