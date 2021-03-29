@@ -79,3 +79,22 @@ form button{
     font-size: 18px;
     
 }
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+    align-items: top;
+    min-height: 100vh;
+    background-color: #222;
+    font-family: sans-serif;
+ }
+span{
+    color: white;
+} 
+.container{
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minimax(280px));
+}   

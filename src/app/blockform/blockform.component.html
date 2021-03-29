@@ -5,7 +5,6 @@
 <!---->
 
 <!---->
-<!---->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Quote</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,81 +34,71 @@
   
   </nav>
 
+<!---->
+<body>
+<div class="container">
+<div class="row">
+  <div class="col-8">
+  <div class="box">
+    <ul>
+      <li *ngFor = "let sample of samples">
+        
+          <span>{{sample.quote}}</span>
+          <pre></pre>
+          <span>{{sample.author}}</span>
+          <pre></pre>
+          <span>{{sample.name}}</span>
+          <pre></pre>
+          <span>{{sample.date}}</span>
+          <pre></pre>
+          <p>{{numberofLikes}}</p>
+          <button (click)= "likeButtonClick()" type="button" class="btn btn-success btn-sm">Like</button>
+          <p>{{numberofDislikes}}</p>
+          <button  (click)= "dislikeButtonClick()" type="button" class="btn btn-danger btn-sm">Dislike</button> 
+      </li>
+    </ul>
+
+    <div>
+      <p>{{numberofLikes}}</p>
+      <button (click)= "likeButtonClick()" type="button" class="btn btn-success btn-sm">Like</button>
+      <p>{{numberofDislikes}}</p>
+      <button  (click)= "dislikeButtonClick()" type="button" class="btn btn-danger btn-sm">Dislike</button> 
+    </div>
+
+    <div>
+      {{today | date:'short'}}
+     </div>
 
 
+  </div>
+  </div>
 <!---->
 
-<div class="container">
-  <div class="row">
-    
-    <div class="col-8">
-      <div class="container">
-        <ul>
-          <li *ngFor = "let sample of samples">
-            
-              <span>{{sample.quote}}</span>
-              <pre></pre>
-              <span>{{sample.author}}</span>
-              <pre></pre>
-              <span>{{sample.name}}</span>
-              <pre></pre>
-              <span>{{sample.date}}</span>
-              <pre></pre>
-              <p>{{numberofLikes}}</p>
-              <button (click)= "likeButtonClick()" type="button" class="btn btn-success btn-sm">Like</button>
-              <p>{{numberofDislikes}}</p>
-              <button  (click)= "dislikeButtonClick()" type="button" class="btn btn-danger btn-sm">Dislike</button> 
-          </li>
-        </ul>
-      </div>
-      
-      <!---->
-      <div>
-        <p>{{numberofLikes}}</p>
-        <button (click)= "likeButtonClick()" type="button" class="btn btn-success btn-sm">Like</button>
-        <p>{{numberofDislikes}}</p>
-        <button  (click)= "dislikeButtonClick()" type="button" class="btn btn-danger btn-sm">Dislike</button> 
-      </div>
-        
-      
-      <!---->
-       <div>
-        {{today | date:'short'}}
-       </div>
-    </div>
+  <div class="col-4">
+    <div class=" form-control container center">
+    <form  class="form1" id="form1">
+      <label for="" class="form2">Quote Creator</label>
+      <div class="">
 
-
-<!---->    
-
-    <div class="col-md-4">
-      <div>
-        <div class=" form-control container center">
-          <form  class="form1" id="form1">
-            <label for="" class="form2">Quote Creator</label>
-            <div class="">
-
-                <label for="">Your Name:</label>
-                <input  name="name" class="form-text">
-                <br><br>
-        
-                <label for="">Quote:</label>
-                <input type="text" placeholder="Quote" class="form-text">
-                <br><br>
-        
-                <label for="">Authors Name:</label>
-                <input type="text" placeholder="Authors Name" class="form-text">
-                <br><br>
-        
-                <button  class="btn btn-primary" type="submit">Submit</button>           
-            </div>  
-        
-          </form>
-        </div>
-      </div>
-      
-    </div>
+          <label for="">Your Name:</label>
+          <input  name="name" class="form-text">
+          <br><br>
+  
+          <label for="">Quote:</label>
+          <input type="text" placeholder="Quote" class="form-text">
+          <br><br>
+  
+          <label for="">Authors Name:</label>
+          <input type="text" placeholder="Authors Name" class="form-text">
+          <br><br>
+  
+          <button  class="btn btn-primary" type="submit">Submit</button>           
+      </div>  
+    </form>
   </div>
+
+</div>
 </div>
 
-
 <!---->
+
