@@ -45,25 +45,15 @@
           <p>Quote Author: <span>{{sample.author}}</span>      Creator Name: <span>{{sample.name}}</span></p>
           <pre></pre>
           <p>Creation Date: <span>{{sample.date}}</span> Time Difference: <span>{{calculateDiff()}}</span></p>
-          
-
           <span> Rating: {{numberofLikes}}</span>
           <button (click)= "likeButtonClick()" type="button" class="btn btn-success btn-sm">Like</button>
           <span>{{numberofDislikes}}</span>
           <button  (click)= "dislikeButtonClick()" type="button" class="btn btn-warning btn-sm">Dislike</button> 
           <span></span>
-          <button (click)="onDelete($event)" class="btn btn-danger btn-sm" >Delete</button>
-          
-          
-          
+          <button (click)="onDelete($event)" class="btn btn-danger btn-sm" >Delete</button> 
       </li>
     </ul>
-
     
-
-    <div>
-      {{today | date:'short'}}
-     </div>
 
 
   </div>
@@ -88,7 +78,14 @@
           <input type="text" placeholder="Authors Name" class="form-text" author="flower" #flower='ngModel' [(ngModel)]="quote.flower" name="flower">
           <br><br>
   
-          <button  class="btn btn-primary" type="submit">Submit</button>           
+          <button  class="btn btn-primary" type="submit">Submit</button> 
+          <pre></pre>
+          <label for="">Time: {{today | date:'short'}}</label>
+          <ul>
+            <li>{{quote.name}}</li>
+            <li>{{quote.head}}</li>
+            <li>{{quote.flower}}</li>
+          </ul>        
       </div>  
     </form>
   </div>

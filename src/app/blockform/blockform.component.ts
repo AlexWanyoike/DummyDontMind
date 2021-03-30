@@ -55,9 +55,9 @@ calculateDiff(){
 //
 
   samples = [
-    { quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.", name: "John", author:"Nelson Mandela", date:`Mon Mar 15 2021 19:38:41 GMT+0300`},
-    { quote: "The way to get started is to quit talking and begin doing.", name: "Henry", author:"Walt Disney" ,date:`Mon Mar 1 2021 19:38:41 GMT+0300` },
-    { quote: "If life were predictable it would cease to be life, and be without flavor.", name: "Lucy", author:"Eleanor Roosevelt" ,date:`Mon Mar 8 2021 19:38:41 GMT+0300` }
+    { quote: "The greatest glory in living lies not in never falling, but in rising every time we fall.", name: "John", author:"Nelson Mandela", date:`${this._today}`},
+    { quote: "The way to get started is to quit talking and begin doing.", name: "Henry", author:"Walt Disney" ,date:`${this._today}` },
+    { quote: "If life were predictable it would cease to be life, and be without flavor.", name: "Lucy", author:"Eleanor Roosevelt" ,date:`${this._today}` }
   ];
 
   
@@ -78,7 +78,7 @@ dislikeButtonClick(){
 
 
 //
-UserName:string = "Enter UserName"
+
 
 //
  
