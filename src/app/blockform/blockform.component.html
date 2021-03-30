@@ -46,12 +46,15 @@
           <pre></pre>
           <p>Creation Date: <span>{{sample.date}}</span> Time Difference: <span>{{calculateDiff()}}</span></p>
           
+
           <span> Rating: {{numberofLikes}}</span>
           <button (click)= "likeButtonClick()" type="button" class="btn btn-success btn-sm">Like</button>
           <span>{{numberofDislikes}}</span>
           <button  (click)= "dislikeButtonClick()" type="button" class="btn btn-warning btn-sm">Dislike</button> 
           <span></span>
           <button (click)="onDelete($event)" class="btn btn-danger btn-sm" >Delete</button>
+          
+          
           
       </li>
     </ul>
